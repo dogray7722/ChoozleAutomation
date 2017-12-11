@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-public class LogOutLoginTest {
+public class LoginLogOutTest {
 
     @Test
     public void LogOutLogin()
@@ -12,7 +12,7 @@ public class LogOutLoginTest {
 
         WebDriver driver=Helper.startBrowser("http://choozle.vm/users/login");
 
-        LogOutLogin login_page= PageFactory.initElements(driver, LogOutLogin.class);
+        LoginLogOut login_page= PageFactory.initElements(driver, LoginLogOut.class);
 
         login_page.login_logout("devs@choozle.com", "choozle123");
 

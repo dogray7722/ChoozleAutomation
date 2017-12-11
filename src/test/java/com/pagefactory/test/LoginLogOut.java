@@ -6,11 +6,11 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class LogOutLogin {
+public class LoginLogOut {
 
     WebDriver driver;
 
-    public LogOutLogin(WebDriver driver) { this.driver=driver; }
+    public LoginLogOut(WebDriver driver) { this.driver=driver; }
 
     @FindBy(how = How.ID,using =  "UserEmail")
     WebElement username;
@@ -28,7 +28,7 @@ public class LogOutLogin {
     @CacheLookup
     WebElement dropdown;
 
-    @FindBy(how = How.XPATH,using = "//*[@id=\"user_nav\"]/ul/li[8]/a")
+    @FindBy(how = How.LINK_TEXT,using = "Logout")
 
     @CacheLookup
     WebElement logout;
@@ -41,6 +41,13 @@ public class LogOutLogin {
         dropdown.click();
         logout.click();
 
+    }
+
+    public void login_choozle(String uid, String pass)
+    {
+        username.sendKeys(uid);
+        password.sendKeys(pass);
+        submit.click();
     }
 
 
