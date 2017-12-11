@@ -23,7 +23,7 @@ public class LoginLogOut {
     @CacheLookup
     WebElement submit;
 
-    @FindBy(how = How.XPATH,using = "//*[@id=\"user_nav\"]/a")
+    @FindBy(how = How.PARTIAL_LINK_TEXT,using = "Hi ")
 
     @CacheLookup
     WebElement dropdown;

@@ -19,4 +19,22 @@ public class LoginLogOutTest {
         driver.quit();
 
     }
+
+    @Test
+    public void checkValidUser()
+    {
+
+        WebDriver driver=Helper.startBrowser("http://choozle.vm/users/login");
+
+        //Create page object using page factory
+        LoginLogOut login_page=PageFactory.initElements(driver, LoginLogOut.class);
+
+        //Call the method
+        login_page.login_choozle("devs@choozle.com", "choozle123");
+
+        driver.quit();
+
+    }
+
+
 }
