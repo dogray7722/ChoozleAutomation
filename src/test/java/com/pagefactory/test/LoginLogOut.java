@@ -6,6 +6,8 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import java.util.concurrent.TimeUnit;
+
 public class LoginLogOut {
 
     WebDriver driver;
@@ -19,19 +21,16 @@ public class LoginLogOut {
     WebElement password;
 
     @FindBy(how = How.XPATH,using = "//*[@id=\"UserLoginForm\"]/div[3]/div/div/input")
-
-    @CacheLookup
     WebElement submit;
 
     @FindBy(how = How.PARTIAL_LINK_TEXT,using = "Hi ")
-
-    @CacheLookup
     WebElement dropdown;
 
     @FindBy(how = How.LINK_TEXT,using = "Logout")
-
-    @CacheLookup
     WebElement logout;
+
+    @FindBy(how = How.PARTIAL_LINK_TEXT,using = "Organization")
+    WebElement myOrganization;
 
     public void login_logout(String uid, String pass)
     {
@@ -39,6 +38,7 @@ public class LoginLogOut {
         password.sendKeys(pass);
         submit.click();
         dropdown.click();
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         logout.click();
 
     }
@@ -48,10 +48,9 @@ public class LoginLogOut {
         username.sendKeys(uid);
         password.sendKeys(pass);
         submit.click();
+        dropdown.click();
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        myOrganization.click();
     }
-
-
-
-
 
 }

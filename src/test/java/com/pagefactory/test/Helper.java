@@ -6,14 +6,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Helper {
 
-//    static WebDriver driver;
+    static WebDriver driver;
 
     public static WebDriver startBrowser(String url) {
-//            WebDriver driver=new ChromeDriver();
-//            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/chromedriver");
+            WebDriver driver=new ChromeDriver();
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/chromedriver");
 
-        WebDriver driver = new FirefoxDriver();
-        System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"/geckodriver");
+//        WebDriver driver = new FirefoxDriver();
+//        System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"/geckodriver");
 
         driver.manage().window().maximize();
         driver.get(url);
