@@ -1,9 +1,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="ChoozleAutomationv1" verbose="1" >
+<suite name="ChoozleAutomationv1" verbose="1">
+
     <test name="Local Chrome and FF Tests" >
-        <classes>
-            <class name="com.pagefactory.test.ButtonandInputFieldTest"/>
-        </classes>
+        <parameter name="browser" value="firefox"></parameter>
+        <packages>
+            <package name="com.pagefactory.test"></package>
+        </packages>
+    </test>
+    <test name="Local Chrome and FF Tests" >
+        <parameter name="browser" value="chrome"></parameter>
+        <packages>
+            <package name="com.pagefactory.test"></package>
+        </packages>
     </test>
 </suite>
