@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="ChoozleAutomationv1" verbose="1" >
+    <test name="Local Chrome and FF Tests" >
+        <classes>
+            <class name="com.pagefactory.test.ButtonandInputFieldTest"/>
+        </classes>
+    </test>
+</suite>
