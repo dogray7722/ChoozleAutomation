@@ -1,15 +1,21 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="ChoozleAutomationv1" verbose="1">
+<suite name="ChoozleAutomationv1">
 
-    <test name="Local Chrome and FF Tests" >
+    <test name="Local Chrome Test" >
         <parameter name="browser" value="firefox"></parameter>
         <packages>
             <package name="com.pagefactory.test"></package>
         </packages>
     </test>
-    <test name="Local Chrome and FF Tests" >
+    <test name="Local FF Test" >
         <parameter name="browser" value="chrome"></parameter>
+        <packages>
+            <package name="com.pagefactory.test"></package>
+        </packages>
+    </test>
+    <test name="Local Safari Test" >
+        <parameter name="browser" value="safari"></parameter>
         <packages>
             <package name="com.pagefactory.test"></package>
         </packages>
