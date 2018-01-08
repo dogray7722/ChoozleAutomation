@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -34,7 +35,7 @@ public class ButtonAndInputFieldTest {
 
         driver.manage().window().maximize();
         driver.get("http://choozle.vm/users/login");
-
+        Assert.assertEquals(driver.getTitle(), "Choozle: Digital Advertising Made Easy™");
         driver.quit();
     }
 
