@@ -36,7 +36,6 @@ public class LoginLogOut {
         WebDriverWait wait = new WebDriverWait(driver,5);
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Hi ")));
         element.click();
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         logout.click();
 
     }
@@ -49,7 +48,6 @@ public class LoginLogOut {
         WebDriverWait wait = new WebDriverWait(driver,5);
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Hi ")));
         element.click();
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         WebDriverWait wait1 = new WebDriverWait(driver,5);
         WebElement element1 = wait1.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("User Info")));
         element1.click();
