@@ -25,14 +25,8 @@ public class LoginLogOut {
     @FindBy(how = How.XPATH,using = "//*[@id=\"UserLoginForm\"]/div[3]/div/div/input")
     WebElement submit;
 
-    @FindBy(how = How.PARTIAL_LINK_TEXT,using = "Hi ")
-    WebElement dropdown;
-
     @FindBy(how = How.LINK_TEXT,using = "Logout")
     WebElement logout;
-
-    @FindBy(how = How.PARTIAL_LINK_TEXT,using = "User Info")
-    WebElement userInfo;
 
     public void login_logout(String uid, String pass)
     {
