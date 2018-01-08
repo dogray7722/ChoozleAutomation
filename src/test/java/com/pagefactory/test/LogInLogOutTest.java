@@ -9,7 +9,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 
-public class LoginLogOutTest {
+public class LogInLogOutTest {
 
     WebDriver driver;
 
@@ -38,7 +38,7 @@ public class LoginLogOutTest {
         driver.get("http://choozle.vm/users/login");
 
 
-        LoginLogOut login_page= PageFactory.initElements(driver, LoginLogOut.class);
+        LogInLogOut login_page= PageFactory.initElements(driver, LogInLogOut.class);
 
         login_page.login_logout("devs@choozle.com", "choozle123");
 
@@ -74,7 +74,7 @@ public class LoginLogOutTest {
 
 
         //Create page object using page factory
-        LoginLogOut login_page=PageFactory.initElements(driver, LoginLogOut.class);
+        LogInLogOut login_page=PageFactory.initElements(driver, LogInLogOut.class);
 
         //Call the method
         login_page.login_choozle("devs@choozle.com", "choozle123");

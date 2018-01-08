@@ -8,7 +8,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class ButtonandInputFieldTest {
+public class ButtonAndInputFieldTest {
 
     WebDriver driver;
 

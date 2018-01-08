@@ -10,11 +10,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-public class LoginLogOut {
+public class LogInLogOut {
 
     WebDriver driver;
 
-    public LoginLogOut(WebDriver driver) { this.driver=driver; }
+    public LogInLogOut(WebDriver driver) { this.driver=driver; }
 
     @FindBy(how = How.ID,using =  "UserEmail")
     WebElement username;
