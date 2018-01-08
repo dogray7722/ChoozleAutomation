@@ -42,6 +42,8 @@ public class LogInLogOutTest {
 
         login_page.login_logout("devs@choozle.com", "choozle123");
 
+        //Create a assertion statement here?  What would the assertion be?  That the element was clickable, that the element was clicked?
+
         driver.quit();
 
     }
